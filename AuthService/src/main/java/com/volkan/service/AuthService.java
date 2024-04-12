@@ -92,14 +92,6 @@ public class AuthService extends ServiceManager<Auth,Long> {
             throw new AuthServiceException(EErrorType.TOKEN_NOT_CREATED);
         return token.get();
     }
-    public List<Auth> findAll (String token) {
-        Optional <Long> id= tokenManager.getIdFromToken(token);
-        if(id.isEmpty())
-            throw new AuthServiceException(EErrorType.INVALID_TOKEN);
-        if (findById(id.get()).isEmpty())
-            throw new AuthServiceException(EErrorType.INVALID_TOKEN);
-        return findAll();
-    }
 
     public Boolean deleteAuth (Long id) {
         Optional<Auth> auth = findById(id);
@@ -127,6 +119,5 @@ public class AuthService extends ServiceManager<Auth,Long> {
         auth.get().setStatus(dto.getEStatus());
         update(auth.get());
         return true;
-        //
     }
 }
