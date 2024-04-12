@@ -49,9 +49,7 @@ public class RateFilter implements Filter {
             requestCounts.put(ipAddress, 1);
             lastRequestTimes.put(ipAddress, LocalDateTime.now());
         }
-
         filterChain.doFilter(servletRequest, servletResponse);
-        //
     }
 
     @Override
