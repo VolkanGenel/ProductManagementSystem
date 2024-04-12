@@ -1,4 +1,8 @@
 
 Ï
-java:S2681*"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(«™êüýÿÿÿÿ8ÜÛ¼•ì1J$ff6611a8-8ebc-447f-b486-1b2c6b5c2b37
-~	java:S125"<This block of commented-out lines of code should be removed.(°ò’Ø8‡™±Áì1J$ff2dcd7e-7e49-4179-aab3-4bfeb945c413
+java:S2681*"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(«™êüýÿÿÿÿ8ÜÛ¼•ì1J$e740bb90-7ce7-4ac0-bee9-03011d6ed038
+˜
+java:S3655Z"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(˜Ï¸Åþÿÿÿÿ8µ—Î˜í1J$71536cff-33e8-40eb-89fd-db5df2f86af5
+‡
+java:S2583["DChange this condition so that it does not always evaluate to "false"(åÐð“8µ—Î˜í1J$97b82142-cf04-4daf-a008-3f434d44a600
+~	java:S125"<This block of commented-out lines of code should be removed.(°ò’Ø8‡™±Áì1J$8d8a5832-e0a9-49e2-a825-9af775e17378
