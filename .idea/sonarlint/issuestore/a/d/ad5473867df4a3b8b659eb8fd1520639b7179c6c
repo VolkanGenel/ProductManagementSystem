@@ -1,7 +1,0 @@
-
-r	java:S106"+Replace this use of System.out by a logger.(ς¬Ν—ÿÿÿÿÿ8ψ–Ισμ1J$dc8dc8b3-9870-4d1a-bba0-4221f6e21a1d
-r	java:S106 "+Replace this use of System.out by a logger.(«σ²μψÿÿÿÿ8ω–Ισμ1J$f7b79db1-aef5-4718-b568-8c4422c0c766
-p
-java:S1128"TRemove this unused import 'org.springframework.dao.DataIntegrityViolationException'.(ΕΤΊ(8²θÒσμ1
-s
-java:S1128	"VRemove this unused import 'org.springframework.web.bind.MissingPathVariableException'.(•°”8²θÒσμ1

@@ -1,10 +1,0 @@
-
-g	java:S112"FDefine and throw a dedicated exception instead of using a generic one.(Ò‚Òéüÿÿÿÿ8ïá´Áì1
-_
-java:S1643"Use a StringBuilder instead.(ªïçó8”Ğ’Áì1J$fa62d821-3100-4fc4-85ec-f330cc2ae055
-d
-java:S1643"Use a StringBuilder instead.(ÙÓ÷çúÿÿÿÿ8”Ğ’Áì1J$8d61af83-1cd7-4e78-9a98-14c0e972a166
-ˆ
-java:S1488%"fImmediately return this expression instead of assigning it to the temporary variable "hashedPassword".(¯‡ÑÍÿÿÿÿÿ8ğá´Áì1
-}
-java:S1118	":Add a private constructor to hide the implicit public one.(åˆÂØ8šĞ’Áì1J$a090e864-c22e-4fb2-a4e1-450e3eadfaf7

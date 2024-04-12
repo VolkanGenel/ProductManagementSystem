@@ -1,1 +1,0 @@
-Uygulamada beklenmeyen bir hata oluştu No static resource auth/find-all.
