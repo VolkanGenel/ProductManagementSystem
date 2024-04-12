@@ -3,6 +3,7 @@ package com.volkan.service;
 import com.volkan.dto.request.LoginRequestDto;
 import com.volkan.dto.request.RegisterRequestDto;
 import com.volkan.dto.request.ResetPasswordRequestDto;
+import com.volkan.dto.request.UpdateRoleRequestDto;
 import com.volkan.exception.AuthServiceException;
 import com.volkan.exception.EErrorType;
 import com.volkan.mapper.IAuthMapper;
@@ -107,5 +108,25 @@ public class AuthService extends ServiceManager<Auth,Long> {
         auth.get().setStatus(EStatus.DELETED);
         update(auth.get());
         return true;
+    }
+
+    public Boolean updateAuth(UpdateRoleRequestDto dto) {
+        Optional <Long> id= tokenManager.getIdFromToken(dto.getToken());
+        if(id.isEmpty())
+            throw new AuthServiceException(EErrorType.INVALID_TOKEN);
+        Optional<Auth> tokenOwner = findById(id.get());
+        if(tokenOwner.isEmpty())
+            throw new AuthServiceException(EErrorType.AUTH_NOT_FOUND);
+        if(!tokenOwner.get().getEmail().equals("volkangenel@hotmail.com")) {
+            throw new AuthServiceException(EErrorType.UNAUTHORIZED_REQUEST);
+        }
+        Optional<Auth> auth = repository.findByEmail(dto.getEmail());
+        if (auth.isEmpty())
+            throw new AuthServiceException(EErrorType.AUTH_NOT_FOUND);
+        auth.get().setRole(dto.getERole());
+        auth.get().setStatus(dto.getEStatus());
+        update(auth.get());
+        return true;
+        //
     }
 }

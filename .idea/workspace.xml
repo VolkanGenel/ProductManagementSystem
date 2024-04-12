@@ -98,7 +98,7 @@
     "SONARLINT_PRECOMMIT_ANALYSIS": "true",
     "WebServerToolWindowFactoryState": "false",
     "jdk.selected.JAVA_MODULE": "17",
-    "last_opened_file_path": "/Users/sezaigenel/Desktop/Task/ProductManagementSystem",
+    "last_opened_file_path": "/Users/sezaigenel/Desktop/MyTask/ProductManagementSystem",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -346,6 +346,7 @@
       <workItem from="1712645703628" duration="53098000" />
       <workItem from="1712845085777" duration="35989000" />
       <workItem from="1712923073501" duration="23000" />
+      <workItem from="1712937410542" duration="24000" />
     </task>
     <task id="LOCAL-00001" summary="Commit">
       <created>1712920679157</created>

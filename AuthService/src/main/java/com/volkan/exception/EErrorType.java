@@ -5,8 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.springframework.http.HttpStatus;
 
-import static org.springframework.http.HttpStatus.BAD_REQUEST;
-import static org.springframework.http.HttpStatus.INTERNAL_SERVER_ERROR;
+import static org.springframework.http.HttpStatus.*;
 
 
 @NoArgsConstructor
@@ -26,7 +25,9 @@ public enum EErrorType {
     STATUS_NOT_ACTIVE(4005,"Auth status is not active, please reset your password first to make it active",HttpStatus.BAD_REQUEST),
     AUTH_DELETED(4006,"Auth was deleted, please contact Manager!", HttpStatus.BAD_REQUEST),
     TOKEN_NOT_CREATED(3001,"Token not created",HttpStatus.BAD_REQUEST),
-    INVALID_PARAMETER(3001,"Invalid parameter", BAD_REQUEST);
+    INVALID_PARAMETER(3001,"Invalid parameter", BAD_REQUEST),
+    UNAUTHORIZED_REQUEST(401,"Unauthorized request",UNAUTHORIZED);
+
 
     private int code;
     private String message;
