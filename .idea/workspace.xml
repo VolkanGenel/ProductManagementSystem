@@ -4,83 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ba507f81-b19b-4d39-bba7-4d20397e4339" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/0/5/05efc8b1657769a27696d478ded1e95f38737233" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/5/b/5bbfa66edb4db3c7c33c5181f43510990d3307f9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/1/912d1f24bb283bddb5c173408382775232d0bd13" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/2/9282de42fdd92f96bfdaa8eed76823d133cf1624" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/9/5/95a6eca4acac70dab87a10208cf232110ad2721c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/f/0/f07866736216be0ee2aba49e392191aeae700a35" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/issuestore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/0/5/05efc8b1657769a27696d478ded1e95f38737233" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/5/b/5bbfa66edb4db3c7c33c5181f43510990d3307f9" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/1/912d1f24bb283bddb5c173408382775232d0bd13" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/2/9282de42fdd92f96bfdaa8eed76823d133cf1624" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/9/5/95a6eca4acac70dab87a10208cf232110ad2721c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/f/0/f07866736216be0ee2aba49e392191aeae700a35" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sonarlint/securityhotspotstore/index.pb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/AuthServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/config/RateFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/config/rabbitmq/RabbitConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/config/swagger/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/constants/EndPoints.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/controller/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/dto/request/LoginRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/dto/request/RegisterRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/dto/request/ResetPasswordRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/exception/AuthServiceException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/exception/EErrorType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/exception/ErrorMessage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/exception/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/mapper/IAuthMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/rabbitmq/model/ResetPasswordModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/rabbitmq/producer/ResetPasswordProducer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/repository/IAuthRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/repository/entity/Auth.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/repository/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/service/AuthService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/utility/CodeGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/utility/IService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/utility/JwtTokenManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/AuthService/src/main/java/com/volkan/utility/ServiceManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConfigServerGit/src/main/java/com/volkan/ConfigServerGitApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConfigServerGit/src/main/resources/application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConfigServerGit/src/main/resources/config-repo/auth-application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConfigServerGit/src/main/resources/config-repo/gateway-application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConfigServerGit/src/main/resources/config-repo/mail-application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ConfigServerGit/src/main/resources/config-repo/product-application.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MailService/src/main/java/com/volkan/MailServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MailService/src/main/java/com/volkan/config/RabbitConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MailService/src/main/java/com/volkan/rabbitmq/consumer/ResetPasswordConsumer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MailService/src/main/java/com/volkan/rabbitmq/model/ResetPasswordModel.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MailService/src/main/java/com/volkan/service/MailSenderService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/volkan/ProductServiceApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/volkan/config/filter/RateFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/volkan/config/security/JwtTokenFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/volkan/config/security/JwtUserDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/volkan/config/security/UserSecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/volkan/config/swagger/SwaggerConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/volkan/dto/request/BaseRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/volkan/dto/request/FindProductRequestDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/volkan/dto/response/GetIdRoleStatusFromTokenResponseDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/volkan/repository/enums/ERole.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/volkan/repository/enums/EStatus.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/volkan/utility/JwtTokenManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProductService/src/main/java/com/volkan/utility/StringPrefixedSequenceIdGenerator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle" afterDir="false" />
-    </list>
+    <list default="true" id="ba507f81-b19b-4d39-bba7-4d20397e4339" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -119,7 +43,25 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="volkan" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="851e535f-9777-4d65-b386-5a50725c35aa" />
+        <option name="url" value="https://github.com/VolkanGenel/ProductManagementSystem.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/ProductService/src/main/java/com/volkan/service/ProductService.java" root0="SKIP_HIGHLIGHTING" />
@@ -378,11 +320,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.ProductManagementSystem [test]" />
-        <item itemvalue="HTTP Request.generated-requests | #9" />
         <item itemvalue="Spring Boot.GatewayApplication" />
+        <item itemvalue="HTTP Request.generated-requests | #9" />
         <item itemvalue="HTTP Request.generated-requests | #7" />
         <item itemvalue="HTTP Request.generated-requests | #6" />
+        <item itemvalue="Gradle.ProductManagementSystem [test]" />
       </list>
     </recent_temporary>
   </component>
@@ -398,11 +340,22 @@
       <workItem from="1712256860974" duration="56085000" />
       <workItem from="1712525163576" duration="31394000" />
       <workItem from="1712645703628" duration="53098000" />
-      <workItem from="1712845085777" duration="33739000" />
+      <workItem from="1712845085777" duration="34736000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
