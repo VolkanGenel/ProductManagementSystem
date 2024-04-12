@@ -1,0 +1,1 @@
+Uygulamada beklenmeyen bir hata oluştu Required request parameter 'email' for method parameter type String is not present

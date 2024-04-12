@@ -1,0 +1,8 @@
+
+Ï
+java:S2681)"†This line will not be executed conditionally; only the first line of this 2-line block will be. The rest will execute unconditionally.(«™êüýÿÿÿÿ8ÜÛ¼•ì1J$061caa62-b259-4bad-a7b8-58b335bd3cf5
+˜
+java:S3655Y"PCall "Optional#isPresent()" or "!Optional#isEmpty()" before accessing the value.(˜Ï¸Åþÿÿÿÿ8×Å–Âì1J$00db3f92-b526-4901-9d3f-060ef34048be
+‡
+java:S2583Z"DChange this condition so that it does not always evaluate to "false"(åÐð“8×Å–Âì1J$99ca296b-32fb-4e0f-b57f-3d401d0b46a9
+~	java:S125"<This block of commented-out lines of code should be removed.(°ò’Ø8‡™±Áì1J$67e0e1af-3b86-45be-9f16-bab674088634

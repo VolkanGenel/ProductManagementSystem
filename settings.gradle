@@ -1,0 +1,8 @@
+rootProject.name = 'ProductManagementSystem'
+include 'ProductService'
+include 'AuthService'
+include 'MailService'
+include 'ConfigServerGit'
+include 'ConfigServer'
+include 'Gateway'
+
