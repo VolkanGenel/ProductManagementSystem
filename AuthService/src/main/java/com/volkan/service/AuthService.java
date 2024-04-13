@@ -4,6 +4,7 @@ import com.volkan.dto.request.LoginRequestDto;
 import com.volkan.dto.request.RegisterRequestDto;
 import com.volkan.dto.request.ResetPasswordRequestDto;
 import com.volkan.dto.request.UpdateRoleRequestDto;
+import com.volkan.dto.response.FindAllResponseDto;
 import com.volkan.exception.AuthServiceException;
 import com.volkan.exception.EErrorType;
 import com.volkan.mapper.IAuthMapper;
@@ -119,5 +120,9 @@ public class AuthService extends ServiceManager<Auth,Long> {
         auth.get().setStatus(dto.getEStatus());
         update(auth.get());
         return true;
+    }
+
+    public List<FindAllResponseDto> findAllDto() {
+        return findAll().stream().map(x-> IAuthMapper.INSTANCE.toFindAllResponseDto(x)).toList();
     }
 }

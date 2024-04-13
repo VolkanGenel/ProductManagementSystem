@@ -1,6 +1,5 @@
 server:
   port: 9594
-
 spring:
   cloud:
     config:

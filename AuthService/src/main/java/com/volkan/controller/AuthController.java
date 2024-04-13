@@ -5,6 +5,7 @@ import com.volkan.dto.request.LoginRequestDto;
 import com.volkan.dto.request.RegisterRequestDto;
 import com.volkan.dto.request.ResetPasswordRequestDto;
 import com.volkan.dto.request.UpdateRoleRequestDto;
+import com.volkan.dto.response.FindAllResponseDto;
 import com.volkan.exception.AuthServiceException;
 import com.volkan.exception.EErrorType;
 import com.volkan.repository.entity.Auth;
@@ -41,6 +42,11 @@ public class AuthController {
     @GetMapping(FIND_ALL)
     public ResponseEntity<List<Auth>> findAll() {
         return ResponseEntity.ok(authService.findAll());
+    }
+
+    @GetMapping(FIND_ALL_DTO)
+    public ResponseEntity<List<FindAllResponseDto>> findAllDto() {
+        return ResponseEntity.ok(authService.findAllDto());
     }
 
     @GetMapping(FORGOT_PASSWORD)
