@@ -115,7 +115,7 @@ public class AuthService extends ServiceManager<Auth,Long> {
         }
         Optional<Auth> auth = repository.findByEmail(dto.getEmail());
         if (auth.isEmpty())
-            throw new AuthServiceException(EErrorType.AUTH_NOT_FOUND);
+            throw new AuthServiceException(EErrorType.EMAIL_NOT_FOUND);
         auth.get().setRole(dto.getERole());
         auth.get().setStatus(dto.getEStatus());
         update(auth.get());
