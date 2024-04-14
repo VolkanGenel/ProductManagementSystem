@@ -21,4 +21,6 @@ yetkiye göre istek atılabilir, diğer türlü ADMIN_ROLE'e sahip bir kişi olm
 8) postgres pgAdmin indirilmiş olmalı, sonrasında AuthServiceDB ve ProductServiceDB Databaseleri oluşturulmalı.
 9) docker build --platform linux/amd64 --build-arg JAR_FILE=ConfigServerGit/build/libs/ConfigServerGit-v.0.1.jar -t volkangenel/product-management-configservergit:v.0.1 . 
 10) docker build --platform linux/amd64 --build-arg JAR_FILE=AuthService/build/libs/AuthService-v.0.1.jar -t volkangenel/product-management-authservice:v.0.1 .
-11) docker build --platform linux/amd64 --build-arg JAR_FILE=AuthService/build/libs/AuthService-v.0.1.jar -t volkangenel/product-management-authservice:v.0.1 .
+11) docker build --platform linux/amd64 --build-arg JAR_FILE=ProductService/build/libs/ProductService-v.0.1.jar -t volkangenel/product-management-productservice:v.0.1 .
+12) docker build --platform linux/amd64 --build-arg JAR_FILE=MailService/build/libs/MailService-v.0.1.jar -t volkangenel/product-management-mailservice:v.0.1 .
+13) docker build --platform linux/amd64 --build-arg JAR_FILE=Gateway/build/libs/Gateway-v.0.1.jar -t volkangenel/product-management-gateway:v.0.1 .
