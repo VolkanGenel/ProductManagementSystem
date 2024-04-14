@@ -26,9 +26,8 @@ public class UserSecurityConfig {
                                 "/v3/api-docs/**"
                         ).permitAll()
                         .requestMatchers("/error").permitAll()
-                        .requestMatchers("/product/**").permitAll()         //.hasAuthority("ADMIN")
-                        .requestMatchers("/auth/**").permitAll()    //.hasAuthority("ADMIN")
-
+                        .requestMatchers("/product/**").permitAll()
+                        .requestMatchers("/auth/**").permitAll()
                         .anyRequest()
                         .authenticated()
         );

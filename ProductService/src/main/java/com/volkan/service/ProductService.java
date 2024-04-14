@@ -40,10 +40,10 @@ public class ProductService extends ServiceManager<Product,String> {
         if (product.isEmpty()) {
             throw new ProductServiceException(EErrorType.PRODUCT_NOT_FOUND);
         }
-        if(dto.getDescription().isBlank())
+        if (dto.getDescription().isBlank())
             throw new ProductServiceException(EErrorType.INVALID_PARAMETER, "Product description must be provided");
-        if(dto.getName()==null)
-            throw new ProductServiceException(EErrorType.INVALID_PARAMETER,"Product name must be provided");
+        if (dto.getName() == null)
+            throw new ProductServiceException(EErrorType.INVALID_PARAMETER, "Product name must be provided");
 
         Product toUpdateProduct = product.get();
 
@@ -54,7 +54,7 @@ public class ProductService extends ServiceManager<Product,String> {
         return IProductMapper.INSTANCE.toUpdateProductResponseDto(update(toUpdateProduct));
     }
 
-    public String deleteProduct (String id) {
+    public String deleteProduct(String id) {
         Optional<Product> product = findById(id);
         if (product.isEmpty()) {
             throw new ProductServiceException(EErrorType.PRODUCT_NOT_FOUND);
@@ -68,49 +68,51 @@ public class ProductService extends ServiceManager<Product,String> {
         Pageable pageable;
         Sort sort = null;
 
-        if(dto.getSortParameter()!=null) {
-            String direction = dto.getDirection()==null ? "ASC" : dto.getDirection();
+        if (dto.getSortParameter() != null) {
+            String direction = dto.getDirection() == null ? "ASC" : dto.getDirection();
             sort = Sort.by(Sort.Direction.fromString(direction), dto.getSortParameter());
         }
 
         Integer pageSize = dto.getPageSize() == null ? 5 :
                 dto.getPageSize() < 1 ? 5 : dto.getPageSize();
-        if(sort!=null && dto.getCurrentPage()!=null) {
+        if (sort != null && dto.getCurrentPage() != null) {
             pageable = PageRequest.of(dto.getCurrentPage(), pageSize, sort);
-        } else if (sort==null && dto.getCurrentPage()!=null) {
+        } else if (sort == null && dto.getCurrentPage() != null) {
             pageable = PageRequest.of(dto.getCurrentPage(), pageSize);
         } else {
-            pageable = PageRequest.of(0,pageSize);
+            pageable = PageRequest.of(0, pageSize);
         }
         Page<Product> pageProduct = repository.findAll(pageable);
         return pageProduct;
     }
-    public Page<Product> findAllPages(Integer numberOfProducts,Integer currentPage,String sortParameter, String direction2) {
+
+    public Page<Product> findAllPages(Integer numberOfProducts, Integer currentPage, String sortParameter, String direction2) {
 
         Pageable pageable;
         Sort sort = null;
 
-        if(sortParameter!=null) {
-            String direction = direction2==null ? "ASC" : direction2;
+        if (sortParameter != null) {
+            String direction = direction2 == null ? "ASC" : direction2;
             sort = Sort.by(Sort.Direction.fromString(direction), sortParameter);
         }
 
         Integer pageSize = numberOfProducts == null ? 5 :
                 numberOfProducts < 1 ? 5 : numberOfProducts;
-        if(sort!=null && currentPage!=null) {
+        if (sort != null && currentPage != null) {
             pageable = PageRequest.of(currentPage, pageSize, sort);
-        } else if (sort==null && currentPage!=null) {
+        } else if (sort == null && currentPage != null) {
             pageable = PageRequest.of(currentPage, pageSize);
         } else {
-            pageable = PageRequest.of(0,pageSize);
+            pageable = PageRequest.of(0, pageSize);
         }
         Page<Product> pageProduct = repository.findAll(pageable);
         return pageProduct;
     }
 
-    public List<Product> findProduct(FindProductRequestDto dto){
-        return   repository.findByIdContainingIgnoreCaseAndNameContainingIgnoreCaseAndDescriptionContainingIgnoreCase(dto.getId(), dto.getName(), dto.getDescription());
+    public List<Product> findProduct(FindProductRequestDto dto) {
+        return repository.findByIdContainingIgnoreCaseAndNameContainingIgnoreCaseAndDescriptionContainingIgnoreCase(dto.getId(), dto.getName(), dto.getDescription());
     }
+
     public List<Product> findProductByName(String name) {
         return repository.findProductByName(name);
     }

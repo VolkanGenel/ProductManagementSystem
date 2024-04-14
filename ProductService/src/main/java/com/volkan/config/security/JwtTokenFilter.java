@@ -43,7 +43,7 @@ public class JwtTokenFilter extends OncePerRequestFilter {
                 response.setStatus(EErrorType.INVALID_TOKEN.getCode());
                 response.sendError(EErrorType.INVALID_TOKEN.getCode(),EErrorType.INVALID_TOKEN.getMessage());
             }
-            else if (!dto.get().getStatus().toString().equals("ACTIVE1")) {
+            else if (!dto.get().getStatus().toString().equals("ACTIVE")) {
                 response.setHeader("Error--Reason",EErrorType.STATUS_NOT_ACTIVE.getMessage());
                 response.setStatus(EErrorType.STATUS_NOT_ACTIVE.getCode());
                 response.sendError(EErrorType.STATUS_NOT_ACTIVE.getCode(),EErrorType.STATUS_NOT_ACTIVE.getMessage());
