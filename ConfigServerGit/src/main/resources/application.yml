@@ -5,7 +5,7 @@ spring:
     config:
       server:
         git:
-          uri: "https://github.com/VolkanGenel/ConfigProductManagement.git"
+          uri: ${GIT_SOURCE}
           default-label: main
           skip-ssl-validation: true
           username: VolkanGenel

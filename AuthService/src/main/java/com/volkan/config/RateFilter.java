@@ -37,9 +37,9 @@ public class RateFilter implements Filter {
         if (ChronoUnit.SECONDS.between(lastRequestTime, LocalDateTime.now()) <= TIME_LIMIT_IN_SECONDS) {
             if (requestCount >= REQUEST_LIMIT) {
                 HttpServletResponse response = (HttpServletResponse) servletResponse;
+                response.setHeader("Retry-After", String.valueOf(TIME_LIMIT_IN_SECONDS+" seconds!"));
                 response.setStatus(SC_TOO_MANY_REQUESTS);
                 response.sendError(SC_TOO_MANY_REQUESTS,"Too Many Requests");
-                response.setHeader("Retry-After", String.valueOf(TIME_LIMIT_IN_SECONDS));
                 return;
             } else {
                 requestCounts.put(ipAddress, requestCount + 1);
