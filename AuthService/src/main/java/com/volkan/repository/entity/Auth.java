@@ -8,6 +8,7 @@ import lombok.experimental.SuperBuilder;
 
 @SuperBuilder
 @Data
+@EqualsAndHashCode(callSuper=false)
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString

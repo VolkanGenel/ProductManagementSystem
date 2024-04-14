@@ -10,6 +10,7 @@ import org.hibernate.annotations.Parameter;
 
 @SuperBuilder
 @Data
+@EqualsAndHashCode(callSuper=false)
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString

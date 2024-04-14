@@ -19,4 +19,6 @@ yetkiye göre istek atılabilir, diğer türlü ADMIN_ROLE'e sahip bir kişi olm
 
 7) postgre EXTERNAL-IP=34.163.221.50, port=22222, password=root
 8) postgres pgAdmin indirilmiş olmalı, sonrasında AuthServiceDB ve ProductServiceDB Databaseleri oluşturulmalı.
-9) 
+9) docker build --platform linux/amd64 --build-arg JAR_FILE=ConfigServerGit/build/libs/ConfigServerGit-v.0.1.jar -t volkangenel/product-management-configservergit:v.0.1 . 
+10) docker build --platform linux/amd64 --build-arg JAR_FILE=AuthService/build/libs/AuthService-v.0.1.jar -t volkangenel/product-management-authservice:v.0.1 .
+11) docker build --platform linux/amd64 --build-arg JAR_FILE=AuthService/build/libs/AuthService-v.0.1.jar -t volkangenel/product-management-authservice:v.0.1 .
