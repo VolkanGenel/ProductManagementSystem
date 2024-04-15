@@ -1,19 +1,29 @@
-# ProductManagementSystem
-PROJE İÇİN DOCKER'DA kod run edilmeli.
-## RabbitMQ Docker
-    docker run -d --hostname my-rabbit --name some-rabbit -p 15672:15672 -p 5672:5672 -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=root rabbitmq:3-management
-1) postgres pgAdmin indirilmiş olmalı, sonrasında AuthServiceDB ve ProductServiceDB Databaseleri oluşturulmalı.
+[//]: # (# ProductManagementSystem)
 
-2) Modüllerde öncelikle ConfigServerGit, sonra ApiGateway sonrasında AuthService, ProductService ve MailService Mikroservisleri ayağa kaldırılmalı.
+[//]: # (PROJE İÇİN DOCKER'DA kod run edilmeli.)
 
-3) Proje çalıştırılıp tablolar oluşturulunca register işleminde volkangenel@hotmail.com emailli bir kişi oluşturulmalı;
-çünkü update işlemini gerçekleştirerek ADMIN_ROLE tanımlama yetkisi o emaile sahip kişide. Sonrasında ProductService'te
-yetkiye göre istek atılabilir, diğer türlü ADMIN_ROLE'e sahip bir kişi olmayacağı için ürün ekleme yapılamayacaktır.
+[//]: # (## RabbitMQ Docker)
 
+[//]: # (    docker run -d --hostname my-rabbit --name some-rabbit -p 15672:15672 -p 5672:5672 -e RABBITMQ_DEFAULT_USER=user -e RABBITMQ_DEFAULT_PASS=root rabbitmq:3-management)
 
+[//]: # (1&#41; postgres pgAdmin indirilmiş olmalı, sonrasında AuthServiceDB ve ProductServiceDB Databaseleri oluşturulmalı.)
 
-4) AuthService için methodlar buradan görüntülenebilir http://34.163.6.240:9595/swagger-ui/index.html#/
-   ProductService için methodlar buradan görüntülenebilir http://34.155.67.112:9596/swagger-ui/index.html#/
+[//]: # ()
+[//]: # (2&#41; Modüllerde öncelikle ConfigServerGit, sonra ApiGateway sonrasında AuthService, ProductService ve MailService Mikroservisleri ayağa kaldırılmalı.)
+
+[//]: # ()
+[//]: # (3&#41; Proje çalıştırılıp tablolar oluşturulunca register işleminde volkangenel@hotmail.com emailli bir kişi oluşturulmalı;)
+
+[//]: # (çünkü update işlemini gerçekleştirerek ADMIN_ROLE tanımlama yetkisi o emaile sahip kişide. Sonrasında ProductService'te)
+
+[//]: # (yetkiye göre istek atılabilir, diğer türlü ADMIN_ROLE'e sahip bir kişi olmayacağı için ürün ekleme yapılamayacaktır.)
+
+-- KURULUM GEREKTİRMEDEN İŞLEM YAPMAK İÇİN;
+1) Kayıt işlemi gerçek bir mail adresi ile yapılmalı
+2) Admin yetkisi verilmeden ürün kayıt işlemleri gibi işlemler yapılamamaktadır. Bu yüzden talep edilmeli
+
+3) AuthService için methodlar buradan görüntülenebilir http://34.163.6.240:9595/swagger-ui/index.html#/
+4) ProductService için methodlar buradan görüntülenebilir http://34.155.67.112:9596/swagger-ui/index.html#/
 5) ProductMicroService için User'ın şifresi ve emaili ile Login methodu çalıştırılarak token alınıp bu tokenla Swagger veya PostMan üzerinden istek atılarak başlanabilir.
 
 6) postgre EXTERNAL-IP=34.163.221.50, port=11111, password=root
