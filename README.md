@@ -34,3 +34,4 @@
 10) docker build --platform linux/amd64 --build-arg JAR_FILE=ProductService/build/libs/ProductService-v.0.1.jar -t volkangenel/product-management-productservice:v.0.1 .
 11) docker build --platform linux/amd64 --build-arg JAR_FILE=MailService/build/libs/MailService-v.0.1.jar -t volkangenel/product-management-mailservice:v.0.1 .
 12) docker build --platform linux/amd64 --build-arg JAR_FILE=Gateway/build/libs/Gateway-v.0.1.jar -t volkangenel/product-management-gateway:v.0.1 .
+13) ApiGateway için http://34.155.185.73/
