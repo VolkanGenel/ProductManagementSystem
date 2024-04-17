@@ -10,5 +10,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class UpdateProductResponseDto {
+    String id;
     String name;
+    String description;
+    Double price;
 }

@@ -10,6 +10,7 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.hibernate.validator.internal.constraintvalidators.hv.ru.INNValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -34,19 +35,13 @@ public class JwtTokenFilter extends OncePerRequestFilter {
             Optional<String> token = Optional.of(userHeader.substring(7));
             Optional<GetIdRoleStatusFromTokenResponseDto> dto = jwtTokenManager.getIdRoleStatusFromToken(token.get());
             if (!dto.isPresent()) {
-                response.setHeader("Error-Reason",EErrorType.INVALID_TOKEN.getMessage());
-                response.setStatus(EErrorType.INVALID_TOKEN.getCode());
-                response.sendError(EErrorType.INVALID_TOKEN.getCode(),EErrorType.INVALID_TOKEN.getMessage());
+                sendResponse(response,EErrorType.INVALID_TOKEN);
             }
             else if (!Optional.of(dto.get().getStatus()).isPresent()) {
-                response.setHeader("ErrorReason",EErrorType.INVALID_TOKEN.getMessage());
-                response.setStatus(EErrorType.INVALID_TOKEN.getCode());
-                response.sendError(EErrorType.INVALID_TOKEN.getCode(),EErrorType.INVALID_TOKEN.getMessage());
+                sendResponse(response,EErrorType.INVALID_TOKEN);
             }
             else if (!dto.get().getStatus().toString().equals("ACTIVE")) {
-                response.setHeader("Error--Reason",EErrorType.STATUS_NOT_ACTIVE.getMessage());
-                response.setStatus(EErrorType.STATUS_NOT_ACTIVE.getCode());
-                response.sendError(EErrorType.STATUS_NOT_ACTIVE.getCode(),EErrorType.STATUS_NOT_ACTIVE.getMessage());
+                sendResponse(response,EErrorType.STATUS_NOT_ACTIVE);
             }
             else if (Optional.of(dto.get().getRole()).isPresent() && Optional.of(dto.get().getId()).isPresent()) {
                 UserDetails userDetails = jwtUserDetails.loadUserByUserRole(dto.get().getRole().toString(),dto.get().getId());
@@ -54,12 +49,16 @@ public class JwtTokenFilter extends OncePerRequestFilter {
                         new UsernamePasswordAuthenticationToken(userDetails,null,userDetails.getAuthorities());
                 SecurityContextHolder.getContext().setAuthentication(authenticationToken);
             } else {
-                response.setHeader("ErrorReason-",EErrorType.INVALID_TOKEN.getMessage());
-                response.setStatus(EErrorType.INVALID_TOKEN.getCode());
-                response.sendError(EErrorType.INVALID_TOKEN.getCode(),EErrorType.INVALID_TOKEN.getMessage());
+                sendResponse(response,EErrorType.INVALID_TOKEN);
             }
 
         }
-        filterChain.doFilter(request,response);
+            filterChain.doFilter(request, response);
+    }
+
+    public void sendResponse (HttpServletResponse response, EErrorType errorType) throws IOException {
+        response.setHeader("Error-Reason",errorType.getMessage());
+        response.setStatus(errorType.getCode());
+        response.sendError(errorType.getCode(),errorType.getMessage());
     }
 }

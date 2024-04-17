@@ -18,7 +18,9 @@ public enum EErrorType {
     METHOD_MIS_MATCH_ERROR(400,"The format entered does not match the expected format.",BAD_REQUEST),
     METHOD_NOT_VALID_ARGUMENT_ERROR(400,"Missing parameter submission in URL",BAD_REQUEST),
     INVALID_PARAMETER(400,"Invalid Parameter Error", BAD_REQUEST),
-    STATUS_NOT_ACTIVE(401,"Auth status is not active, please make it active",UNAUTHORIZED),
+    STATUS_NOT_ACTIVE(403,"Auth status is not active, please make it active",FORBIDDEN),
+    NO_TOKEN_PRESENTED(401,"Please login first and provide a valid token",UNAUTHORIZED),
+    NO_PERMISSION(403,"Tou don't have permission to do process",FORBIDDEN),
     TOO_MANY_REQUESTS(429,"Too many try please try again one minute later", HttpStatus.TOO_MANY_REQUESTS);
 
     private int code;

@@ -22,7 +22,7 @@ public enum EErrorType {
     EMAIL_NOT_FOUND(404,"No auth found with this email",NOT_FOUND),
     PASSWORD_UNMATCHED(400,"Passwords are not matched",BAD_REQUEST),
     LOGIN_ERROR(400,"Email or password is incorrect",BAD_REQUEST),
-    STATUS_NOT_ACTIVE(401,"Auth status is not active, please reset your password first to make it active",UNAUTHORIZED),
+    STATUS_NOT_ACTIVE(401,"Auth status is not active, please reset your password first to make it active",FORBIDDEN),
     AUTH_DELETED(403,"Auth was deleted, please contact Manager!", FORBIDDEN),
     TOKEN_NOT_CREATED(400,"Token not created",BAD_REQUEST),
     INVALID_PARAMETER(400,"Invalid parameter", BAD_REQUEST),
