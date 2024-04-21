@@ -7,4 +7,14 @@ dependencies {
     implementation libs.postgresql
     implementation libs.springBootDataJpa
     implementation libs.springBootAmqp
+    testImplementation (libs.springBootStarterTest)
+    testImplementation(platform(libs.jUnitPlatform))
+    testImplementation(libs.jUnit)
+    testImplementation(libs.mockito)
+    testImplementation(libs.mockitoInLine)
+
+}
+
+tasks.named('test') {
+    useJUnitPlatform()
 }

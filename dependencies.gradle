@@ -40,7 +40,7 @@ ext{
 
             springBootMailSender    : "org.springframework.boot:spring-boot-starter-mail:$versions.springBoot",
 
-            sprinBootStarterTest    : "org.springframework.boot:spring-boot-starter-test:$versions.springBoot",
+            springBootStarterTest    : "org.springframework.boot:spring-boot-starter-test:$versions.springBoot",
             jUnit                   : "org.junit.jupiter:junit-jupiter",
             jUnitPlatform           : "org.junit:junit-bom:$versions.jUnitPlatform",
             mockito                 : "org.mockito:mockito-junit-jupiter:$versions.mockito",

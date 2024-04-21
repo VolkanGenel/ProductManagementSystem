@@ -1,0 +1,23 @@
+server:
+  port: 8585
+spring:
+  cloud:
+    config:
+      enabled: false
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: user
+#    password: root
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5432/AuthServiceDBTest
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
